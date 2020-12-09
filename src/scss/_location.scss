@@ -1,0 +1,108 @@
+.location {
+  position: relative;
+  padding: 210px 0 224px 0;
+  
+   @media(max-width: 992px) {
+     padding: 100px 0;
+   }
+    @media(max-width: 600px) {
+      text-align: center;
+    }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex: 0 1 40%;
+    max-width: 469px;
+     @media(max-width: 600px) {
+       flex: 1 1 100%;
+     }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    line-height: 1.2;
+    margin-bottom: 52px;
+
+    p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__bottom {}
+
+  &__bottom-title {
+    margin-bottom: 31px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $sharkcolor;
+  }
+
+  &__bottom-items {
+    display: flex;
+  }
+
+  &__bottom-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__map-world {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  &__map-dots {
+    height: 80%;
+    max-width: 80%;
+    object-fit: contain;
+    position: absolute;
+    content: "";
+    top: 62px;
+    left: 140px;
+    transform: scale(0);
+    transition: all 1s linear 1s;
+
+  }
+  &__map-dots._anim-active {
+    transform: scale(1);
+  }
+  &__map-image {
+    content: "";
+    position: absolute;
+    right: 0.2%;
+    top: 23%;
+    min-width: 600px;
+  }
+}
+
+.descr {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $sharkcolor;
+  letter-spacing: 1px;
+}
+
+.show{display:block}
+.hide{display:none}
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade{
+  from{opacity: 0.1;}
+  to{opacity: 1;}
+}

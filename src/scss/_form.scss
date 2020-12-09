@@ -1,0 +1,35 @@
+.form {
+  padding: 80px 0px 86px 0;
+  text-align: center;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 562px;
+  }
+
+  &__title {
+    margin-bottom: 37px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    color: $oslograycolor;
+  }
+
+  &__form {
+    margin-bottom: 27px;
+  }
+
+  &__input {
+    background-color: $whitecolor;
+  }
+
+  &__btn {
+    padding: 0 35px;
+  }
+}
+
+.status {
+  font-size: 15px;
+  padding: 10px;
+}

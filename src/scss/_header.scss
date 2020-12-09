@@ -1,0 +1,154 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    @media(max-width: 767px) {
+      padding: 20px 0;
+      overflow: hidden;
+    }
+
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+  }
+
+  &__burger {}
+
+  &__menu {}
+
+  &__logo {
+    margin-right: -38px;
+  }
+
+  &__button {
+    margin: 0 0 0 38px;
+    padding: 0 23px 0 15px;
+
+    @media(max-width: 992px) {
+      margin-left: 15px;
+    }
+
+    span {
+      display: block;
+      padding-left: 38px;
+      background: url("../img/sprite.svg#apple") left no-repeat;
+      background-size: 30px;
+       @media(max-width: 415px) {
+         background: none;
+         padding-left: 0;
+       }
+    }
+  }
+}
+
+.logo {
+  &__link {
+    width: 140px;
+    height: 13px;
+    display: inline-block;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 21px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  line-height: 42px;
+  transition: 0.5s linear;
+
+  &:hover {
+    background: #000;
+  }
+}
+
+.button_blue {
+  color: $whitecolor;
+  background: $dodgerblue;
+}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    @media (max-width: 992px) {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+  }
+
+  &__link {
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 16px;
+    color: $sharkcolor;
+    transition: color 0.3s linear;
+
+
+
+    &:hover {
+      color: rgba(27, 28, 30, 0.4);
+    }
+  }
+
+  &__link_active {
+    color: rgba(27, 28, 30, 0.4);
+  }
+}
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(236, 236, 236, 0.945);
+  padding: 70px 0 0 20px;
+  background-origin: padding-box;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+  transform: translateX(-300%);
+  transition: all 0.8s ease 0s;
+
+  &_active {
+    transform: translateX(0);
+  }
+
+  @media(max-width: 767px) {
+    .menu__list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
